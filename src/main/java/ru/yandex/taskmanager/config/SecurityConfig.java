@@ -1,4 +1,3 @@
-/*
 package ru.yandex.taskmanager.config;
 
 import org.springframework.context.annotation.Bean;
@@ -52,4 +51,3 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 }
-*/

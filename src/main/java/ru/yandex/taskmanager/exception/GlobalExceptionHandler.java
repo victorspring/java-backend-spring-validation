@@ -1,4 +1,3 @@
-/*
 package ru.yandex.taskmanager.exception;
 
 import org.springframework.http.HttpStatus;
@@ -21,5 +20,16 @@ public class GlobalExceptionHandler {
         return problem;
     }
 
+    @ExceptionHandler(TaskNotFoundException.class)
+    public ProblemDetail taskNotFound(TaskNotFoundException ex) {
+        ProblemDetail problem =
+                ProblemDetail.forStatus(HttpStatus.BAD_REQUEST);
+
+        problem.setTitle("Task not found");
+        problem.setDetail(ex.getMessage());
+
+        return problem;
+    }
+
 }
-*/
+
